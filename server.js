@@ -5,6 +5,9 @@ import {connect} from './db'
 import {authRouter} from './aurthorization'
 import {restRouter} from './api/restRouter'
 const app = express();
+const net = require('net');
+const port = 8000;
+const host = 'https://stark-mesa-34134.herokuapp.com/';
 
 require("dotenv").config()
 
