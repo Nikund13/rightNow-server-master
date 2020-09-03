@@ -5,6 +5,14 @@ import {FirebaseNotification} from '../realTimeAndNotification/notification.moda
 export const conncetSocket = ()=>{
 var fcm = new FCM(serverKey)
 var Liveusers = [];
+app = express.createServer();
+socket = require("socket.io")
+// io = socket.listen(app);
+io.configure(function () {
+  io.set("transports", ["xhr-polling"]);
+  io.set("polling duration", 10);
+});
+
 io.on('connection', function (socket) {
 
   // start listening for coords
