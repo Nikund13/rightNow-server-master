@@ -67,6 +67,5 @@ io.on('connection', function (socket) {
       console.log("after deleate Liveusers List:",Liveusers)
     })
 });
-const socket = require('socket.io-client')('https://stark-mesa-34134.herokuapp.com/')
 
 }
