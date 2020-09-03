@@ -6,8 +6,8 @@
     "start": "nodemon --exec babel-node -- ./index.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "",
-  "license": "ISC",
+  "author": "Nikund13",
+  "license": "MIT",
   "dependencies": {
     "@babel/core": "^7.10.3",
     "@babel/node": "^7.10.3",
@@ -35,13 +35,17 @@
     "socket.io": "^2.3.0",
     "ws": "^7.3.1"
   },
+  "keywords": [
+    "rightnow",
+    "heroku"
+  ],
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/shubhamkanani/rightNow-server.git"
+    "url": "git+https://github.com/Nikund13/rightNow-server-master.git"
   },
   "bugs": {
-    "url": "https://github.com/shubhamkanani/rightNow-server/issues"
+    "url": "https://github.com/Nikund13/rightNow-server-master/issues"
   },
-  "homepage": "https://github.com/shubhamkanani/rightNow-server#readme",
+  "homepage": "https://github.com/Nikund13/rightNow-server-master#readme",
   "description": ""
 }

@@ -1,6 +1,6 @@
 import {io} from '../../index'
 import FCM from 'fcm-node';
-import serverKey from '../../config/test-cb583-firebase-adminsdk-7y92g-312fa47d88.json' 
+import serverKey from '../../config/test-cb583-firebase-adminsdk-7y92g-312fa47d88.json'
 import {FirebaseNotification} from '../realTimeAndNotification/notification.modal'
 export const conncetSocket = ()=>{
 var fcm = new FCM(serverKey)
@@ -34,13 +34,13 @@ io.on('connection', function (socket) {
           console.log(socket.nickname);
           const notiToken = await FirebaseNotification.findOne({userId:item})
           console.log("userId : ",notiToken.userId)
-          var message = { 
-            to: notiToken.mobileToken, 
+          var message = {
+            to: notiToken.mobileToken,
             notification: {
-                title: 'Title of your push notification', 
-                body: 'Body of your push notification' 
+                title: 'Title of your push notification',
+                body: 'Body of your push notification'
             },
-            data: {  
+            data: {
                 request_userId:socket.nickname
             }
           }
@@ -63,9 +63,10 @@ io.on('connection', function (socket) {
     socket.on('disconnect',()=>{
       //delete Liveusers[socket.nickname];
       Liveusers = Liveusers.filter(item=>item.userId!==socket.nickname);
-      
+
       console.log("after deleate Liveusers List:",Liveusers)
     })
 });
+const socket = require('socket.io-client')('https://stark-mesa-34134.herokuapp.com/')
 
 }
